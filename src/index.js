@@ -1,7 +1,7 @@
-import { setupHomePage } from './home.js';
+import { loadHomePage } from './home.js';
 
 createNavBar();
-setupHomePage();
+loadHomePage();
 
 function createNavBar() {
   const content = document.getElementById('content');
@@ -9,9 +9,8 @@ function createNavBar() {
   const homeLink = document.createElement('a');
   homeLink.textContent = 'HOME';
   homeLink.href = '#';
-
+  homeLink.addEventListener('click', loadHomePage);
   nav.appendChild(homeLink);
-  content.appendChild(nav);
 
   const menuLink = document.createElement('a');
   menuLink.textContent = 'MENU';
@@ -22,4 +21,6 @@ function createNavBar() {
   contactLink.textContent = 'CONTACT';
   contactLink.href = '#';
   nav.appendChild(contactLink);
+
+  content.appendChild(nav);
 }

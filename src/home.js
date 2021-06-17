@@ -1,6 +1,7 @@
 import restaurantImg from './restaurant-photo.png'
 
-function setupHomePage() {
+
+function loadHomePage() {
   const homeContent = document.createElement('div');
   homeContent.setAttribute('id', 'home-content');
 
@@ -18,6 +19,7 @@ function setupHomePage() {
   homeContent.appendChild(img);
 
   document.body.appendChild(homeContent);
+
 }
 
-export { setupHomePage };
+export { loadHomePage };
