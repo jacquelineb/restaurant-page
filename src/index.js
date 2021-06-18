@@ -4,12 +4,16 @@ createNavBar();
 loadHomePage();
 
 function createNavBar() {
-  const content = document.getElementById('content');
   const nav = document.createElement('nav');
   const homeLink = document.createElement('a');
   homeLink.textContent = 'HOME';
   homeLink.href = '#';
-  homeLink.addEventListener('click', loadHomePage);
+  homeLink.addEventListener('click', () => {
+    //const homeContent = document.getElementById('home-content');
+    // get the child of #content
+    // if this child is not homeContent, remove it and load homeContent
+    // if this child is homeContent, don't need to do anything
+  });
   nav.appendChild(homeLink);
 
   const menuLink = document.createElement('a');
@@ -22,5 +26,5 @@ function createNavBar() {
   contactLink.href = '#';
   nav.appendChild(contactLink);
 
-  content.appendChild(nav);
+  document.body.prepend(nav);
 }
