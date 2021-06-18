@@ -4,7 +4,7 @@ function loadContactPage() {
   const mainHeader = document.createElement('h1');
   mainHeader.textContent = 'Contact';
   contactContent.appendChild(mainHeader);
-  document.body.appendChild(contactContent);
+  document.getElementById('content').appendChild(contactContent);
 }
 
 export { loadContactPage };

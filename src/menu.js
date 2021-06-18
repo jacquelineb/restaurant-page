@@ -5,7 +5,7 @@ function loadMenuPage() {
   mainHeader.textContent = 'Menu';
   menuContent.appendChild(mainHeader);
 
-  document.body.appendChild(menuContent);
+  document.getElementById('content').appendChild(menuContent);
 }
 
 export { loadMenuPage };

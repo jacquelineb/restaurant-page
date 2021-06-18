@@ -18,7 +18,7 @@ function loadHomePage() {
   img.alt = 'interior of a restaurant';
   homeContent.appendChild(img);
 
-  document.body.appendChild(homeContent);
+  document.getElementById('content').appendChild(homeContent);
 
 }
 
