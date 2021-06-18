@@ -1,0 +1,8 @@
+.tab-link {
+  padding: 4px;
+  font-size: 32px;
+}
+
+.active-tab {
+  background-color:gray;
+}

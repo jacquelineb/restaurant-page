@@ -1,12 +1,19 @@
+import './style.css';
 import { loadHomeContent } from './home.js';
 import { loadMenuContent } from './menu.js';
 import { loadContactContent } from './contact.js';
 
-createNavBar();
-loadHomeContent();
+initializePage();
+
+function initializePage() {
+  createNavBar();
+  document.getElementById('home-tab').classList.add('active-tab');
+  loadHomeContent();
+}
 
 function createNavBar() {
   const nav = document.createElement('nav');
+  nav.setAttribute('id', 'main-nav');
   const homeTab = document.createElement('a');
   homeTab.setAttribute('id', 'home-tab');
   homeTab.textContent = 'HOME';
@@ -24,6 +31,7 @@ function createNavBar() {
 
   nav.childNodes.forEach((navItem) => {
     navItem.href = "#";
+    navItem.classList.add('tab-link');
     navItem.addEventListener('click', switchTab);
   });
 
@@ -31,18 +39,23 @@ function createNavBar() {
 }
 
 function switchTab(e) {
-  const tabToDisplay = e.target.id;
   const currContent = document.getElementById('content').firstChild;
-  if (currContent.id !== tabToDisplay) {
-    currContent.remove();
-    if (tabToDisplay == 'home-tab') {
-      loadHomeContent();
-    }
-    else if (tabToDisplay == 'menu-tab') {
-      loadMenuContent();
-    }
-    else {
-      loadContactContent();
-    }
+  currContent.remove();
+
+  const nav = document.getElementById('main-nav');
+  nav.childNodes.forEach((navItem) => {
+    navItem.classList.remove('active-tab');
+  });
+
+  const tabClicked = e.target;
+  tabClicked.classList.add('active-tab');
+  if (tabClicked.id == 'home-tab') {
+    loadHomeContent();
+  }
+  else if (tabClicked.id == 'menu-tab') {
+    loadMenuContent();
+  }
+  else {
+    loadContactContent();
   }
 }
