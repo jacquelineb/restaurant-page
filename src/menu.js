@@ -1,4 +1,4 @@
-function loadMenuPage() {
+function loadMenuContent() {
   const menuContent = document.createElement('div');
   menuContent.setAttribute('id', 'menu-content');
   const mainHeader = document.createElement('h1');
@@ -8,4 +8,4 @@ function loadMenuPage() {
   document.getElementById('content').appendChild(menuContent);
 }
 
-export { loadMenuPage };
+export { loadMenuContent };

@@ -1,47 +1,48 @@
-import { loadContactPage } from './contact.js';
-import { loadHomePage } from './home.js';
-import { loadMenuPage } from './menu.js';
+import { loadHomeContent } from './home.js';
+import { loadMenuContent } from './menu.js';
+import { loadContactContent } from './contact.js';
 
 createNavBar();
-loadHomePage();
+loadHomeContent();
 
 function createNavBar() {
   const nav = document.createElement('nav');
-  const homeLink = document.createElement('a');
-  homeLink.setAttribute('data-name', 'home-content');
-  homeLink.textContent = 'HOME';
-  nav.appendChild(homeLink);
+  const homeTab = document.createElement('a');
+  homeTab.setAttribute('id', 'home-tab');
+  homeTab.textContent = 'HOME';
+  nav.appendChild(homeTab);
 
-  const menuLink = document.createElement('a');
-  menuLink.setAttribute('data-name', 'menu-content');
-  menuLink.textContent = 'MENU';
-  nav.appendChild(menuLink);
+  const menuTab = document.createElement('a');
+  menuTab.setAttribute('id', 'menu-tab');
+  menuTab.textContent = 'MENU';
+  nav.appendChild(menuTab);
 
-  const contactLink = document.createElement('a');
-  contactLink.setAttribute('data-name', 'contact-content');
-  contactLink.textContent = 'CONTACT';
-  nav.appendChild(contactLink);
+  const contactTab = document.createElement('a');
+  contactTab.setAttribute('id', 'contact-tab');
+  contactTab.textContent = 'CONTACT';
+  nav.appendChild(contactTab);
 
-  nav.childNodes.forEach((navLink) => {
-    navLink.href = "#";
-    navLink.addEventListener('click', switchContents);
+  nav.childNodes.forEach((navItem) => {
+    navItem.href = "#";
+    navItem.addEventListener('click', switchTab);
   });
+
   document.body.prepend(nav);
 }
 
-function switchContents(e) {
-  const contentToShow = e.target.dataset.name;
+function switchTab(e) {
+  const tabToDisplay = e.target.id;
   const currContent = document.getElementById('content').firstChild;
-  if (currContent.id !== contentToShow) {
+  if (currContent.id !== tabToDisplay) {
     currContent.remove();
-    if (contentToShow == 'home-content') {
-      loadHomePage();
+    if (tabToDisplay == 'home-tab') {
+      loadHomeContent();
     }
-    else if (contentToShow == 'menu-content') {
-      loadMenuPage();
+    else if (tabToDisplay == 'menu-tab') {
+      loadMenuContent();
     }
     else {
-      loadContactPage();
+      loadContactContent();
     }
   }
 }

@@ -1,4 +1,4 @@
-function loadContactPage() {
+function loadContactContent() {
   const contactContent = document.createElement('div');
   contactContent.setAttribute('id', 'contact-content');
   const mainHeader = document.createElement('h1');
@@ -7,4 +7,4 @@ function loadContactPage() {
   document.getElementById('content').appendChild(contactContent);
 }
 
-export { loadContactPage };
+export { loadContactContent };
