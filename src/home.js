@@ -5,7 +5,7 @@ function loadHomeContent() {
   homeContent.setAttribute('id', 'home-content');
 
   const mainHeader = document.createElement('h1');
-  mainHeader.textContent = 'Restaurant Homepage';
+  mainHeader.textContent = 'The Canteen';
   homeContent.appendChild(mainHeader);
 
   const spiel = document.createElement('p');
