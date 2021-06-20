@@ -1,16 +1,29 @@
+body {
+  margin: 0;
+  background-color: beige;
+}
+
 #main-nav {
   text-align: center;
 }
 
-#content {
-  text-align: center;
+.tab-link {
+  color: rgb(141, 140, 140);
+  display: inline-block;
+  font-size: 32px;
+  padding: 14px;
+  text-decoration: none;
 }
 
-.tab-link {
-  padding: 4px;
-  font-size: 32px;
+.tab-link:hover {
+  color:black;
 }
 
 .active-tab {
   background-color:gray;
+  color:black;
+}
+
+#content {
+  text-align: center;
 }
