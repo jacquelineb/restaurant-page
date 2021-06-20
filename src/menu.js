@@ -9,12 +9,12 @@ const menu = [
     img: chefsChoice,
   },
   {
-    name: 'Fish Platter',
-    img: fishPlatter,
-  },
-  {
     name: 'Meat Platter',
     img: meatPlatter,
+  },
+  {
+    name: 'Fish Platter',
+    img: fishPlatter,
   },
   {
     name: 'Veggie Platter',
@@ -25,15 +25,12 @@ const menu = [
 function loadMenuContent() {
   const menuContent = document.createElement('div');
   menuContent.setAttribute('id', 'menu-content');
-  /*
-  const mainHeader = document.createElement('h1');
-  mainHeader.textContent = 'Menu';
-  menuContent.appendChild(mainHeader);
-  */
 
   menu.forEach((item) => {
     const menuItem = document.createElement('div');
+    menuItem.classList.add('menu-item');
     const itemName = document.createElement('p');
+    itemName.classList.add('meal-name');
     itemName.textContent = item.name;
     menuItem.appendChild(itemName);
 
