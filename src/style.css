@@ -27,3 +27,14 @@ body {
 #content {
   text-align: center;
 }
+
+#restaurant-spiel {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#meowster-img {
+  height: 500px;
+}
