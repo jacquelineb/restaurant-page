@@ -17,6 +17,7 @@ function loadContactContent() {
   }
 
   const map = new Image();
+  map.setAttribute('id', 'astera-map');
   map.src = LocationImg;
   contactContent.appendChild(map);
 

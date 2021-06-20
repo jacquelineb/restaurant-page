@@ -35,6 +35,10 @@ body {
   margin-bottom: 50px;
 }
 
+h1 {
+  font-size: 48px;
+}
+
 #restaurant-spiel {
   font-size: 20px;
   margin-left: auto;
@@ -67,4 +71,14 @@ body {
   border-style: solid;
   border-radius: 4px;
   width: 75%;
+}
+
+#contact-content {
+  font-size: 20px;
+}
+
+#astera-map {
+  border-style: solid;
+  border-radius: 4px;
+  margin-top: 10px;
 }
