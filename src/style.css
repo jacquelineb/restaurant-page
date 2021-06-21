@@ -31,10 +31,9 @@ body {
 
 #content {
   border-top: 4px solid brown;
-  text-align: center;
-  min-width: 100vh;
   margin-bottom: 50px;
   padding-top: 30px;
+  text-align: center;
 }
 
 h1 {
@@ -51,7 +50,7 @@ h1 {
 #meowster-img {
   border-style: solid;
   border-radius: 4px;
-  height: 500px;
+  width: 50%;
 }
 
 #menu-content {
@@ -82,4 +81,11 @@ h1 {
   border-style: solid;
   border-radius: 4px;
   margin-top: 10px;
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+  #menu-content {
+    grid-template-columns: 1fr;
+  }
 }
