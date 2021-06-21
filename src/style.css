@@ -50,7 +50,7 @@ h1 {
 #meowster-img {
   border-style: solid;
   border-radius: 4px;
-  width: 50%;
+  max-width: 95%;
 }
 
 #menu-content {
@@ -81,10 +81,10 @@ h1 {
   border-style: solid;
   border-radius: 4px;
   margin-top: 10px;
-  width: 40%;
+  max-width: 95%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   #menu-content {
     grid-template-columns: 1fr;
   }
